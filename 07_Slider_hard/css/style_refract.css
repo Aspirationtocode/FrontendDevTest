@@ -5,7 +5,7 @@
 	height:670px;
 	padding:29px 29px 0 40px;
 	}
-	
+
 	.map_area {
 		position:relative;
 		width:100%;
@@ -35,13 +35,13 @@
 				ul.map li:nth-child(7) { top:190px; left:795px; }
 				ul.map li:nth-child(8) { top:310px; left:670px; }
 				ul.map li:nth-child(9) { top:115px; left:845px; }
-				
-				ul.map li.red.yellow { 
+
+				ul.map li.red.yellow {
 					background-image:url(../images/refract/man_red.png);
-					z-index:100;
-					}
-				
-				
+					z-index:
+        }
+
+
 		.drag_red_wrapper {
 			position: absolute;
 			left:0;
@@ -49,7 +49,7 @@
 			width:955px;
 			height:380px;
 			z-index:6;
-			}		
+			}
 			.drag_red {
 				width:940px;
 				height:107px;
@@ -59,13 +59,14 @@
 				padding-left:15px;
 				}
 		.drag_yellow_wrapper {
+      pointer-events: none;
 			position: absolute;
 			top:0;
 			left:315px;
 			width:640px;
 			height:520px;
 			z-index:7;
-			}		
+			}
 			.drag_yellow {
 				width:256px;
 				height:510px;
@@ -74,8 +75,8 @@
 				-webkit-box-pack: center;
                 position:absolute;
 				padding-top:10px;
-				}				
-			
+				}
+
 				.drag_red,
 				.drag_yellow {
 					position: absolute;
@@ -84,7 +85,7 @@
 					display: -webkit-box;
 					font-size:18px;
 					line-height:22px;
-                    
+
 					}
 
 .drag_yellow {
@@ -92,19 +93,19 @@
 left:165px;
 
 }
-			
-			
+
+
 	h3 {
 		position:absolute;
 		left:0;
 		bottom:0;
 		background: url(../images/refract/att.png) no-repeat 25px center;
 		padding-left:43px;
-		}		
-	
-				
+		}
+
+
 	.refer { width:860px; }
-	
+
 		.refer span {
 			float:left;
 			width:16px;
@@ -116,24 +117,3 @@ left:165px;
 			text-decoration:underline;
 			margin-left:18px;
 			}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-				
-				

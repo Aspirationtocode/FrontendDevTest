@@ -12,11 +12,11 @@
     <style type="text/css">
 
         .Peshki div {
-        
+
             background-color:#4a8e21;
-        
+
         }
-        
+
         .Layer3 {
             background-size: 100% 100%;
             position: absolute;
@@ -27,7 +27,7 @@
             z-index: 3;
             background-image: url(images/71/Layer3.png);
         }
-        
+
         .parentSlider {
             background-size: 100% 100%;
             position: absolute;
@@ -37,7 +37,7 @@
             height: 53px;
             z-index: 3;
         }
-        
+
         .Layer4 {
             background-size: 100% 100%;
             position: absolute;
@@ -48,7 +48,7 @@
             z-index: 400;
             background-image: url(images/71/Layer4.png);
         }
-        
+
         .Layer5 {
             background-size: 100% 100%;
             position: absolute;
@@ -58,7 +58,7 @@
             height: 254px;
             z-index: 5;
         }
-        
+
         .Layer6 {
             background-size: 100% 100%;
             position: absolute;
@@ -68,11 +68,11 @@
             height: 241px;
             z-index: 6;
         }
-        
+
         .textFooter {
             font-family: "AgoraBold";
             /*font-family: "PTSans";*/
-            
+
             font-size: 30px;
             color: #5e9c40;
             position: absolute;
@@ -80,12 +80,12 @@
             left: 512px;
             z-index: 6;
         }
-        
+
         @font-face {
             font-family: "AgoraBold";
             src: url('fonts/shared_pfagoraslabpro-bold.ttf');
         }
-        
+
         .Layer7 {
             background-size: 100% 100%;
             position: absolute;
@@ -95,7 +95,7 @@
             height: 229px;
             z-index: 7;
         }
-        
+
         .Layer8 {
             background-size: 100% 100%;
             position: absolute;
@@ -105,7 +105,7 @@
             height: 215px;
             z-index: 8;
         }
-        
+
         .Layer9 {
             background-size: 100% 100%;
             position: absolute;
@@ -115,7 +115,7 @@
             height: 203px;
             z-index: 9;
         }
-        
+
         .Layer10 {
             background-size: 100% 100%;
             position: absolute;
@@ -125,7 +125,7 @@
             height: 191px;
             z-index: 10;
         }
-        
+
         .Layer11 {
             background-size: 100% 100%;
             position: absolute;
@@ -135,7 +135,7 @@
             height: 177px;
             z-index: 11;
         }
-        
+
         .Layer12 {
             background-size: 100% 100%;
             position: absolute;
@@ -145,7 +145,7 @@
             height: 165px;
             z-index: 12;
         }
-        
+
         .Layer13 {
             background-size: 100% 100%;
             position: absolute;
@@ -155,7 +155,7 @@
             height: 153px;
             z-index: 13;
         }
-        
+
         .Layer14 {
             background-size: 100% 100%;
             position: absolute;
@@ -165,15 +165,18 @@
             height: 139px;
             z-index: 14;
         }
-        
 
-        
+
         .Peshki > div {
             display: none;
         }
-        
+
         .Peshki > div.after {
             display: block;
+        }
+
+        .Layer4:hover {
+          cursor: pointer;
         }
     </style>
 </head>
@@ -202,7 +205,29 @@
     <script src="js/hammer.js"></script>
     <script>
         $(function () {
-           
+          const getPercent = (number, all) => 100 / all * number;
+          const getNumber = (percent, all) => Math.round(all / 100 * percent);
+          const getNumberToShow = (percent) => Math.round(0.1 * percent);
+          const maxValue = 100;
+          const sliderWidth = $('.parentSlider').width() - $('.parentSlider div').width();
+          function handleDrag(event, ui) {
+            const fillPercent = getPercent(ui.position.left, sliderWidth);
+            const currentValue = getNumber(fillPercent, maxValue);
+            $('.textFooter').text(currentValue);
+            const numberToShow = getNumberToShow(fillPercent);
+            for (let i = 1; i <= 10; i++) {
+                if (i <= numberToShow) {
+                  $(`.p${i}`).fadeIn(100);
+                } else {
+                  $(`.p${i}`).fadeOut(100);
+                }
+            }
+          }
+           $('.parentSlider div').draggable({
+             axis: "x",
+             containment: ".parentSlider",
+             drag: handleDrag
+           })
         });
     </script>
 </body>

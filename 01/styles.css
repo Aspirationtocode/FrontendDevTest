@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#background {
+    left: 0px;
+    top: 0px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+    height: 768px;
+    overflow: hidden;
+    z-index: 0;
+}
+#back {
+    background-image: url("images/back.png");
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    z-index: 1;
+}
+#firmelement2 {
+		background-image: url("images/firmelement2.png");
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 211px;
+    z-index: 2;
+}
+#layer_3 {
+		background-image: url("images/layer_3.png");
+    left: 70px;
+    top: 39px;
+    position: absolute;
+    width: 710px;
+    height: 66px;
+    z-index: 3;
+
+}
+#NRAS {
+		background-image: url("images/NRAS.png");
+    left: 70px;
+    top: 659px;
+    position: absolute;
+    width: 62px;
+    height: 20px;
+    z-index: 4;
+}
+#KRAS {
+		background-image: url("images/KRAS.png");
+    left: 69px;
+    top: 585px;
+    position: absolute;
+    width: 61px;
+    height: 20px;
+    z-index: 5;
+}
+#layer_6 {
+		background-image: url("images/layer_6.png");
+    left: 69px;
+    top: 483px;
+    position: absolute;
+    width: 96px;
+    height: 51px;
+    z-index: 6;
+}
+#Ellipse1 {
+		background-image: url("images/Ellipse1.png");
+    left: 196px;
+    top: 161px;
+    position: absolute;
+    width: 318px;
+    height: 318px;
+    z-index: 7;
+}
+#Ellipse1copy {
+		background-image: url("images/Ellipse1copy.png");
+    left: 204px;
+    top: 190px;
+    position: absolute;
+    width: 205px;
+    height: 205px;
+    z-index: 8;
+}
+#Ellipse1copy2 {
+		background-image: url("images/Ellipse1copy2.png");
+    left: 361px;
+    top: 210px;
+    position: absolute;
+    width: 143px;
+    height: 144px;
+    z-index: 9;
+}
+#layer_3_0 {
+		background-image: url("images/layer_3_0.png");
+    left: 425px;
+    top: 265px;
+    position: absolute;
+    width: 16px;
+    height: 29px;
+    z-index: 10;
+}
+#layer_6_0 {
+		background-image: url("images/layer_6_0.png");
+    left: 293px;
+    top: 268px;
+    position: absolute;
+    width: 22px;
+    height: 40px;
+    z-index: 11;
+}
+#layer_12 {
+		background-image: url("images/layer_12.png");
+    left: 387px;
+    top: 374px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    z-index: 12;
+}
+#slider {
+		background-image: url("images/slider.png");
+    left: 183px;
+    top: 512px;
+    position: absolute;
+    width: 355px;
+    height: 16px;
+    z-index: 13;
+}
+#level {
+		background-image: url("images/level.png");
+    left: 183px;
+    top: 512px;
+    position: absolute;
+    width: 331px;
+    height: 17px;
+    z-index: 14;
+}
+#Rectangle1copy {
+		background-image: url("images/Rectangle1copy.png");
+    left: 182px;
+    top: 510px;
+    position: absolute;
+    width: 357px;
+    height: 20px;
+    z-index: 15;
+}
+#Rectangle1 {
+		background-image: url("images/Rectangle1.png");
+    left: 182px;
+    top: 510px;
+    position: absolute;
+    width: 332px;
+    height: 20px;
+    z-index: 16;
+}
+#bullits {
+		background-image: url("images/bullits.png");
+    left: 183px;
+    top: 512px;
+    position: absolute;
+    width: 355px;
+    height: 17px;
+    z-index: 17;
+}
+#markershadow2 {
+		background-image: url("images/markershadow2.png");
+    left: 490px;
+    top: 512px;
+    position: absolute;
+    width: 48px;
+    height: 31px;
+    z-index: 18;
+}
+#markershadow1 {
+		background-image: url("images/markershadow1.png");
+    left: 485px;
+    top: 512px;
+    position: absolute;
+    width: 53px;
+    height: 17px;
+    z-index: 19;
+}
+#Layer2 {
+		background-image: url("images/Layer2.png");
+    left: 485px;
+    top: 512px;
+    position: absolute;
+    width: 53px;
+    height: 17px;
+    z-index: 20;
+}
+#marker {
+		background-image: url("images/marker.png");
+    left: 485px;
+    top: 505px;
+    position: absolute;
+    width: 46px;
+    height: 31px;
+    z-index: 21;
+}
+#layer_12_0 {
+		background-image: url("images/layer_12_0.png");
+    left: 498px;
+    top: 478px;
+    position: absolute;
+    width: 22px;
+    height: 20px;
+    z-index: 22;
+}
+#slidercopy {
+		background-image: url("images/slidercopy.png");
+    left: 183px;
+    top: 587px;
+    position: absolute;
+    width: 355px;
+    height: 16px;
+    z-index: 23;
+}
+#levelcopy {
+		background-image: url("images/levelcopy.png");
+    left: 183px;
+    top: 587px;
+    position: absolute;
+    width: 331px;
+    height: 17px;
+    z-index: 24;
+}
+#Rectangle1copy2 {
+		background-image: url("images/Rectangle1copy2.png");
+    left: 182px;
+    top: 585px;
+    position: absolute;
+    width: 357px;
+    height: 20px;
+    z-index: 25;
+}
+#Rectangle1copy2_0 {
+		background-image: url("images/Rectangle1copy2_0.png");
+    left: 182px;
+    top: 585px;
+    position: absolute;
+    width: 176px;
+    height: 20px;
+    z-index: 26;
+}
+#bullitscopy {
+		background-image: url("images/bullitscopy.png");
+    left: 183px;
+    top: 587px;
+    position: absolute;
+    width: 355px;
+    height: 17px;
+    z-index: 27;
+}
+#markershadow2_0 {
+		background-image: url("images/markershadow2_0.png");
+    left: 342px;
+    top: 587px;
+    position: absolute;
+    width: 48px;
+    height: 31px;
+    z-index: 28;
+}
+#markershadow1_0 {
+		background-image: url("images/markershadow1_0.png");
+    left: 337px;
+    top: 587px;
+    position: absolute;
+    width: 53px;
+    height: 17px;
+    z-index: 29;
+}
+#Layer2_0 {
+		background-image: url("images/Layer2_0.png");
+    left: 337px;
+    top: 587px;
+    position: absolute;
+    width: 53px;
+    height: 17px;
+    z-index: 30;
+}
+#marker_0 {
+		background-image: url("images/marker_0.png");
+    left: 337px;
+    top: 580px;
+    position: absolute;
+    width: 46px;
+    height: 31px;
+    z-index: 31;
+}
+#layer_6_1 {
+		background-image: url("images/layer_6_1.png");
+    left: 354px;
+    top: 555px;
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    z-index: 32;
+}
+#slidercopy2 {
+		background-image: url("images/slidercopy2.png");
+    left: 183px;
+    top: 662px;
+    position: absolute;
+    width: 355px;
+    height: 16px;
+    z-index: 33;
+}
+#levelcopy2 {
+		background-image: url("images/levelcopy2.png");
+    left: 183px;
+    top: 662px;
+    position: absolute;
+    width: 331px;
+    height: 17px;
+    z-index: 34;
+}
+#Rectangle1copy3 {
+		background-image: url("images/Rectangle1copy3.png");
+    left: 182px;
+    top: 660px;
+    position: absolute;
+    width: 357px;
+    height: 20px;
+    z-index: 35;
+}
+#Rectangle1copy3_0 {
+		background-image: url("images/Rectangle1copy3_0.png");
+    left: 182px;
+    top: 660px;
+    position: absolute;
+    width: 89px;
+    height: 20px;
+    z-index: 36;
+}
+#bullitscopy2 {
+		background-image: url("images/bullitscopy2.png");
+    left: 183px;
+    top: 662px;
+    position: absolute;
+    width: 355px;
+    height: 17px;
+    z-index: 37;
+}
+#markershadow2_1 {
+		background-image: url("images/markershadow2_1.png");
+    left: 261px;
+    top: 662px;
+    position: absolute;
+    width: 48px;
+    height: 31px;
+    z-index: 38;
+}
+#markershadow1_1 {
+		background-image: url("images/markershadow1_1.png");
+    left: 256px;
+    top: 662px;
+    position: absolute;
+    width: 53px;
+    height: 17px;
+    z-index: 39;
+}
+#Layer2_1 {
+		background-image: url("images/Layer2_1.png");
+    left: 256px;
+    top: 662px;
+    position: absolute;
+    width: 53px;
+    height: 17px;
+    z-index: 40;
+}
+#marker_1 {
+		background-image: url("images/marker_1.png");
+    left: 256px;
+    top: 655px;
+    position: absolute;
+    width: 46px;
+    height: 31px;
+    z-index: 41;
+}
+#layer_3_1 {
+		background-image: url("images/layer_3_1.png");
+    left: 273px;
+    top: 630px;
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    z-index: 42;
+}

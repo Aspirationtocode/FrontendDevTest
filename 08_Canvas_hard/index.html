@@ -12,11 +12,7 @@
     <script src="js/jquery-1.8.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script>
-        $(function () {
 
-        });
-    </script>
 </head>
 
 <body>
@@ -31,5 +27,72 @@
             </div>
         </div>
     </div>
+    <script>
+        $(function () {
+          const arrowBox = $('.arrow_box');
+          $('.canvas_area').on('click', function() {
+            !arrowBox.hasClass('active') && paint()
+            arrowBox.addClass('active');
+          })
+
+          function paint() {
+            var can = document.getElementById('canvas_int'),
+                spanProcent = document.getElementById('procent'),
+                 c = can.getContext('2d');
+
+            var posX = can.width / 2,
+                posY = can.height / 2,
+                fps = 1000 / 60,
+                oneProcent = 360 / 100,
+                result = oneProcent * 99;
+
+
+            arcMove(240, 30, '#5C7FA8', function() {
+              arcMove(270, 210, '#9BC9EC', function() {
+                arcMove(120, 29, '#459AC6', function() {
+                  arcMove(149, 2, '#7E9EAE', function() {
+                    arcMove(151, 29, '#459BC7', function() {
+                      arcMove(180, 30, '#3080A8', function() {
+                        setTimeout(() => {
+                          arcMove(270, 60, '#0266AF', function() {
+                            arcMove(330, 30, '#1A4691', function() {
+                              c.clearRect(0, 0, can.width, can.height);
+                              arrowBox.removeClass('active')
+                            }, 256)
+                          }, 256)
+                        }, 1500)
+                      })
+                    })
+                  })
+                })
+              })
+            });
+
+            function fromDeegresToRadians(deg) {
+              return (Math.PI/180) * deg;
+            }
+
+            function arcMove(start, end, color, onEnd, radius = 225){
+              var deegres = 0;
+              var acrInterval = setInterval (function() {
+                deegres += 1;
+                c.beginPath();
+                c.strokeStyle = color;
+                c.lineWidth = '25';
+                c.arc( posX, posY, radius, fromDeegresToRadians(start), fromDeegresToRadians(start + deegres) );
+                c.stroke();
+                if( deegres >= end ) {
+                  clearInterval(acrInterval);
+                  onEnd()
+                }
+              }, fps);
+            }
+          }
+
+
+
+
+        });
+    </script>
 </body>
 </html>

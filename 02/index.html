@@ -7,20 +7,67 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title></title>
-    <link href="css/main.css" rel="stylesheet">>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <div id="background">
-
+    <div class="app-wrapper">
+      <div class="animation-field">
+        <div class="animation-field__element animation-field__element--1s">CSS3 FadeIn FadeOut</div>
+        <div class="animation-field__element animation-field__element--2s">CSS3 Transform Rotate</div>
+        <div class="animation-field__element animation-field__element--3s">CSS3 Transition Scale</div>
+        <div class="animation-field__element animation-field__element--4s">CSS3 Transition Move</div>
+      </div>
+      <div class="animation-controls">
+        <div class="animation-controls__element animation-controls__element--css-start">CSS start</div>
+        <div class="animation-controls__element animation-controls__element--js-start">Jquery start</div>
+        <div class="animation-controls__element animation-controls__element--css-reset">CSS reset</div>
+        <div class="animation-controls__element animation-controls__element--js-reset">Jquery reset</div>
+      </div>
+      <div class="js-animation-field">
+        <div class="js-animation-field__element js-animation-field__element--1s">Jquery FadeIn</div>
+        <div class="js-animation-field__element js-animation-field__element--2s">Jquery FadeOut</div>
+        <div class="js-animation-field__element js-animation-field__element--3s">Jquery Animate</div>
+        <div class="js-animation-field__element js-animation-field__element--4s">Jquery Zoom</div>
+      </div>
     </div>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="js/jquery-2.1.1.min.js" /></script>
+    <script src="js/jquery-ui-1.10.4.min.js" /></script>
+    <script src="js/jquery.ui.touch-punch.min.js" /></script>
     <script>
-        $(function () {
-           
-        });
-    </script>
+    $(function() {
+      const animate = (selector) => $(selector).addClass('animated')
+      const reset = (selector) => $(selector).removeClass('animated')
+      const cssStart = $('.animation-controls__element--css-start');
+      const cssReset = $('.animation-controls__element--css-reset');
+      const jsStart = $('.animation-controls__element--js-start');
+      const jsReset = $('.animation-controls__element--js-reset');
+      const animationElementSelector = '.animation-field__element';
+      cssStart.on('click', function() {
+        animate(animationElementSelector);
+      })
+      cssReset.on('click', function() {
+        reset(animationElementSelector);
+      })
+      jsStart.on('click', function() {
+        $('.js-animation-field__element--1s').animate({
+          "opacity": '1'
+        }, 600);
+        $('.js-animation-field__element--2s').fadeTo(600, 0);
+        animate('.js-animation-field__element--3s');
+        animate('.js-animation-field__element--4s');
+      })
+      jsReset.on('click', function() {
+        $('.js-animation-field__element--1s').animate({
+          "opacity": '0'
+        }, 600);
+        $('.js-animation-field__element--2s').fadeTo(600, 1);
+        reset('.js-animation-field__element--3s');
+        reset('.js-animation-field__element--4s');
+      })
+    });
+</script>
 </body>
 
 </html>

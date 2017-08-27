@@ -10,12 +10,12 @@
 <body>
     <div class="bg"></div>
     <div class="content">
-        <img src="images/img19_6.png" class="img6" width="636">
+        <img src="images/img19_6.png" class="img6 drop" width="636">
         <img src="images/img19_4.png" class="img4 gift">
         <img src="images/img19_5.png" class="img5 gift">
         <img src="images/img19_3.png" class="img3 gift">
         <img src="images/img19_2.png" class="img2 gift">
-        <img src="images/img19_1.png" class="img1" width="566">
+        <img src="images/img19_1.png" class="img1 drop" width="566">
         <div class="img7"></div>
         <div class="img8"></div>
     </div>
@@ -23,9 +23,30 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
-        $(function () {
+    $(function() {
+      $(".gift").draggable({revert: "invalid"});
+      $('.drop').droppable({
+        drop: function(event, ui) {
+          ui.draggable.position({
+           my: "center",
+           at: "center",
+           of: $(this),
+           using: function(pos) {
+             $(this).animate(pos, "slow", "linear");
+             $(this).addClass('dropped')
+             if ($('.dropped').length === 4) {
+               $('.bg').addClass('animated')
+               $('.img7').addClass('animated')
+               setTimeout(() => {
+                 $('.img8').addClass('animated')
+               }, 300)
 
-        });
-    </script>
+             }
+           }
+         });
+		    }
+      })
+    });
+</script>
 </body>
 </html>

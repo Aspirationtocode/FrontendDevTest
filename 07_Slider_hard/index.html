@@ -12,10 +12,7 @@
     <script src="js/jquery-1.8.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script>
-        $(function () {
-        });
-    </script>
+
 </head>
 
 <body>
@@ -42,5 +39,30 @@
             </div>
         </div>
     </div>
+    <script>
+        $(function () {
+          const redRect = $('.drag_red');
+
+          function handleDrag(event, ui) {
+
+            $('.yellow').each(function(i, el) {
+
+              const yellowOffsetTop = $(`.yellow`)[i].offsetTop - 90;
+              const redRectOffsetTop = ui.position.top + 30;
+              if (yellowOffsetTop < redRectOffsetTop) {
+                $(`.yellow:eq(${i})`).addClass('red');
+              }
+              if (yellowOffsetTop < redRectOffsetTop - 60 || yellowOffsetTop > redRectOffsetTop + 60) {
+                $(`.yellow:eq(${i})`).removeClass('red');
+              }
+            })
+          }
+          redRect.draggable({
+            axis: 'y',
+            containment: ".drag_red_wrapper",
+            drag: handleDrag
+          })
+        });
+    </script>
 </body>
 </html>
