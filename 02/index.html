@@ -44,6 +44,8 @@
       const jsStart = $('.animation-controls__element--js-start');
       const jsReset = $('.animation-controls__element--js-reset');
       const animationElementSelector = '.animation-field__element';
+			const js1 = $('.js-animation-field__element--1s');
+			const js2 = $('.js-animation-field__element--2s');
       cssStart.on('click', function() {
         animate(animationElementSelector);
       })
@@ -51,18 +53,18 @@
         reset(animationElementSelector);
       })
       jsStart.on('click', function() {
-        $('.js-animation-field__element--1s').animate({
+        js1.animate({
           "opacity": '1'
         }, 600);
-        $('.js-animation-field__element--2s').fadeTo(600, 0);
+        js2.fadeTo(600, 0);
         animate('.js-animation-field__element--3s');
         animate('.js-animation-field__element--4s');
       })
       jsReset.on('click', function() {
-        $('.js-animation-field__element--1s').animate({
+        js1.animate({
           "opacity": '0'
         }, 600);
-        $('.js-animation-field__element--2s').fadeTo(600, 1);
+        js2.fadeTo(600, 1);
         reset('.js-animation-field__element--3s');
         reset('.js-animation-field__element--4s');
       })

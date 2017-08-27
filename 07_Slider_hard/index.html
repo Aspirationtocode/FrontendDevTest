@@ -42,17 +42,15 @@
     <script>
         $(function () {
           const redRect = $('.drag_red');
-
+					const manHeight = $('.yellow')[0].offsetHeight;
           function handleDrag(event, ui) {
-
             $('.yellow').each(function(i, el) {
-
               const yellowOffsetTop = $(`.yellow`)[i].offsetTop - 90;
-              const redRectOffsetTop = ui.position.top + 30;
+              const redRectOffsetTop = ui.position.top + manHeight / 2;
               if (yellowOffsetTop < redRectOffsetTop) {
                 $(`.yellow:eq(${i})`).addClass('red');
               }
-              if (yellowOffsetTop < redRectOffsetTop - 60 || yellowOffsetTop > redRectOffsetTop + 60) {
+              if (yellowOffsetTop < redRectOffsetTop - manHeight || yellowOffsetTop > redRectOffsetTop + manHeight) {
                 $(`.yellow:eq(${i})`).removeClass('red');
               }
             })
@@ -61,7 +59,7 @@
             axis: 'y',
             containment: ".drag_red_wrapper",
             drag: handleDrag
-          })
+          });
         });
     </script>
 </body>

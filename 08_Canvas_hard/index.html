@@ -31,16 +31,16 @@
         $(function () {
           const arrowBox = $('.arrow_box');
           $('.canvas_area').on('click', function() {
-            !arrowBox.hasClass('active') && paint()
+            !arrowBox.hasClass('active') && paint();
             arrowBox.addClass('active');
           })
 
           function paint() {
-            var can = document.getElementById('canvas_int'),
+            const can = document.getElementById('canvas_int'),
                 spanProcent = document.getElementById('procent'),
                  c = can.getContext('2d');
 
-            var posX = can.width / 2,
+            const posX = can.width / 2,
                 posY = can.height / 2,
                 fps = 1000 / 60,
                 oneProcent = 360 / 100,
@@ -73,8 +73,8 @@
             }
 
             function arcMove(start, end, color, onEnd, radius = 225){
-              var deegres = 0;
-              var acrInterval = setInterval (function() {
+              let deegres = 0;
+              const acrInterval = setInterval (function() {
                 deegres += 1;
                 c.beginPath();
                 c.strokeStyle = color;
